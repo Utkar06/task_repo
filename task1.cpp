@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-int exp(int a,int b){
+double exp(int a,int b){
     
     int ans=1;
     for (int i=0;i<b;i++){
@@ -18,6 +18,35 @@ int fac(int a){
 
     }
     return ans;
+}
+double sin(int a){
+    
+    double ans =0;
+        int j=0;
+        for (int i=1;i<15;){
+            
+            ans =ans+(exp(-1,j))*(exp(a,i)/fac(i));
+            j++;
+            i+=2;
+            cout <<ans<<endl;
+            
+        }
+        return ans;
+            
+}
+double cos(int a){
+    double ans =0;
+        int j=0;
+        for (int i=0;i<15;){
+            
+            ans =ans+(exp(-1,j))*(exp(a,i)/fac(i));
+            j++;
+            i+=2;
+            cout <<ans<<endl;
+            
+        }
+        return ans;
+        
 }
 int main(){
     int opp;
@@ -57,18 +86,10 @@ int main(){
 
     cin>>n>>x;
     switch(n){
-        case 1:int ans =0;
-        int j=0;
-        for (int i=1;i<10;){
-            
-            ans =ans+(exp(-1,j))*(exp(x,i)/fac(i));
-            j++;
-            i+=2;
-            cout <<ans<<endl;
-            
-        }
-        cout<<ans;
-        break;
+        case 1:cout<<sin(x);
+
+        case 2:cout<< cos(x);
+        case 3:cout<<sin(x)/cos(x);
     }
    
     
