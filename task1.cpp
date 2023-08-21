@@ -28,7 +28,7 @@ double sin(int a){
             ans =ans+(exp(-1,j))*(exp(a,i)/fac(i));
             j++;
             i+=2;
-            cout <<ans<<endl;
+            
             
         }
         return ans;
@@ -42,7 +42,7 @@ double cos(int a){
             ans =ans+(exp(-1,j))*(exp(a,i)/fac(i));
             j++;
             i+=2;
-            cout <<ans<<endl;
+            
             
         }
         return ans;
@@ -87,9 +87,12 @@ int main(){
     cin>>n>>x;
     switch(n){
         case 1:cout<<sin(x);
+               break;
 
         case 2:cout<< cos(x);
+                break;
         case 3:cout<<sin(x)/cos(x);
+                break;
     }
    
     
